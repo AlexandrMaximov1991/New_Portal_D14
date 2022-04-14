@@ -164,15 +164,15 @@ ACCOUNT_FORMS = {'signup': 'sign.models.CommonSignupForm'}
 
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'maximovyaa@mail.com'
-EMAIL_HOST_PASSWORD = 'Marija01082017'
+EMAIL_HOST_USER = 'mail@mail.com'
+EMAIL_HOST_PASSWORD = '123456789'
 EMAIL_USE_SSL = True
 
 ADMINS = [
     ('Name', 'mail@mail.com'),
 ]
 
-SERVER_EMAIL = 'maximovyaa@yandex.ru'  # адрес отправителя
+SERVER_EMAIL = 'mail@yandex.ru'  # адрес отправителя
 
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER + '@yandex.ru' # если вы используете Яндекс, то не забудьте добавить + ‘@yandex.ru’
@@ -183,8 +183,8 @@ APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
 # если задача не выполняется за 25 секунд, то она автоматически снимается, можете поставить время побольше, но как правило, это сильно бьёт по производительности сервера
 APSCHEDULER_RUN_NOW_TIMEOUT = 25  # Seconds
 
-CELERY_BROKER_URL = 'redis://:wcUZTzsH3aKuA68IZIBrjHh1AoTfZ7O8@redis-10231.c100.us-east-1-4.ec2.cloud.redislabs.com:10231/0'
-CELERY_RESULT_BACKEND = 'redis://:wcUZTzsH3aKuA68IZIBrjHh1AoTfZ7O8@redis-10231.c100.us-east-1-4.ec2.cloud.redislabs.com:10231/0'
+CELERY_BROKER_URL = 'redis://*****/0'
+CELERY_RESULT_BACKEND = 'redis://*****'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
